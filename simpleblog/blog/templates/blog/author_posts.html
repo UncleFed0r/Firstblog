@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+
+    <div class="container-fluid mt-3 px-4">
+        <h4> Автор статей: "{{ author.get_full_name }}"</h4>
+    </div>
+    {% include 'include/posts.html'%}
+
+    {% include 'include/pagination.html' %}
+
+{% endblock %}

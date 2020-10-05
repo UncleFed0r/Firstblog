@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+
+    {% include 'include/posts.html' with posts=post_list %}
+
+    {% include 'include/pagination.html' %}
+
+{% endblock %}

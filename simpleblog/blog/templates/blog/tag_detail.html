@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load blog_tags %}
+
+
+{% block content %}
+    <div class="container-fluid mt-3 px-4">
+        <h4>Статьи с тегом "{{ tag.title }}"</h4>
+    </div>
+
+    {% get_posts_by_tag tag.slug as posts %}
+
+    {% include 'include/posts.html' %}
+
+
+{% endblock content %}

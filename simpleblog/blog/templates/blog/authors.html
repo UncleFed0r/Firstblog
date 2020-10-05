@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="mt-4 px-3">
+        <h2>Список авторов</h2>
+    </div>
+    <div class="col mt-3 px-4">
+        {% for author in authors %}
+            <a class="btn btn-light btn-sm mb-1" href="/author/{{author}}/">{{ author.get_full_name }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

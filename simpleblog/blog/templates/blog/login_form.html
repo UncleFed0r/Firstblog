@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="border bg-light mx-auto my-5" style="width: 28em;">
+      <div class="py-2 text-center bg-info text-white">
+        <h3>Авторизация</h3>
+      </div>
+
+      <form class="p-4" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+      </form>
+<!--      <form class="p-4">-->
+<!--        <div class="form-group">-->
+<!--          <label for="exampleInputEmail1">Email address</label>-->
+<!--          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label for="exampleInputPassword1">Password</label>-->
+<!--          <input type="password" class="form-control" id="exampleInputPassword1">-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">Login</button>-->
+<!--      </form>-->
+    </div>
+
+  </div>
+{% endblock %}
